@@ -1,6 +1,5 @@
 import java.util.Arrays;
 
-/** Circular array FIFO queue. Freed slots are reused without shifting items. */
 public class CircularQueue {
     private final int[] data;
     private int front;
