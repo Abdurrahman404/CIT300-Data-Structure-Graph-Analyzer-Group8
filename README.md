@@ -1,62 +1,251 @@
 # Data Structure and Graph Performance Analyzer
 
-**Sri Lanka Technological Campus (SLTC)**  
-**Module:** CIT300 - Data Structures and Algorithms  
-**Assignment:** Graded Practical Assignment 2 (Week 12)  
-**Group:** 8
+## CIT300 – Data Structures and Algorithms
+### Graded Practical Assignment 2 – Group 8
 
-## Project Overview
+The **Data Structure and Graph Performance Analyzer** is a Java console application developed for the CIT300 Data Structures and Algorithms module.
 
-This group project aims to develop a Java console application that demonstrates common data structures and algorithms. The application will allow users to perform operations on arrays, stacks, queues and linked lists, use searching algorithms, and explore graphs through BFS and DFS traversal.
+The application demonstrates the implementation and practical use of several important data structures and algorithms without relying on Java's built-in data structure implementations for the main array, stack, queue, and linked-list components.
 
-The project will also compare algorithm performance using operation counts and execution times.
+The project also includes searching algorithms, graph traversal algorithms, and performance measurement features.
 
-## README Status
+---
 
-This initial README records the project scope and team responsibilities. It will be updated with completed contributions, final features, running instructions and demonstration details as the project progresses.
+## Project Status
 
-## Team Members and Assigned Responsibilities
+✅ Project implementation completed  
+✅ Individual member features completed  
+✅ Feature branches created  
+✅ Pull requests merged  
+✅ Main branch contains the integrated project  
+✅ Project ready for demonstration and submission  
 
-| Member | Student ID | Assigned responsibility |
-|---|---|---|
-| **B.M. Abdurrahman (Group Leader)** | **23DA2-0574** | Graph implementation, BFS/DFS traversal, performance comparison and system integration |
-| **M.A.R. Raheeqa Fajr** | **23DA2-1095** | Array operations, linear search and binary search |
-| **M.I. Safa** | **23DA2-511** | Linked-list implementation and operations |
-| **AH Hima** | **23DA2-1096** | Stack and queue implementation and operations |
+---
 
-## Planned Features
+## Project Objectives
 
-- **Array:** Insert, delete, search and display values.
-- **Stack:** Push, pop, peek and display values.
-- **Queue:** Enqueue, dequeue, view the front value and display values.
-- **Linked list:** Insert, delete, search and display values.
-- **Searching:** Implement and compare linear and binary search.
-- **Graph:** Add vertices and edges, display connections, search for vertices, and perform BFS and DFS.
-- **Performance comparison:** Display operation counts, elapsed times and algorithm complexity information.
-- **Input validation:** Handle invalid inputs, empty structures and capacity limits.
-- **System integration:** Provide one console application with a main menu and component submenus.
+The main objectives of this project are to:
 
-## Technologies
+- Implement fundamental data structures manually.
+- Perform different operations on each data structure.
+- Implement Linear Search and Binary Search algorithms.
+- Implement an undirected graph.
+- Perform Breadth-First Search (BFS).
+- Perform Depth-First Search (DFS).
+- Record algorithm steps and execution time.
+- Compare algorithm performance.
+- Integrate all components into one Java console application.
+- Demonstrate GitHub collaboration using branches, commits, and pull requests.
 
-- Java
-- Object-oriented programming
-- Java standard library
-- Git and GitHub
+---
 
-## GitHub Branches
+## Features
 
-| Member | Branch name |
-|---|---|
-| Abdurrahman | `feature/graph-integration-abdurrahman` |
-| Raheeqa | `feature/array-search-raheeqa` |
-| Safa | `feature/linked-list-safa` |
-| Hima | `feature/stack-queue-hima` |
+### 1. Integer Array
 
-Each member will use their assigned branch for their work, make meaningful commits and submit pull requests for review. Reviewed changes will be merged into `main` to build the integrated application.
+The application contains a fixed-capacity integer array implementation.
 
-## Final Deliverables
+Supported operations include:
 
-- Complete Java console application in the GitHub repository.
-- Updated README with individual contributions and running instructions.
-- One merged demonstration video of less than 15 minutes, showing every member's contribution with their face visible during their presentation.
-- Collaboration records through the team's actual commits, branches and pull requests.
+- Insert an element
+- Delete an element
+- Search for an element
+- Display array elements
+- Validate array indexes
+- Handle array capacity
+
+Implemented in:
+
+`src/IntArray.java`
+
+---
+
+### 2. Stack
+
+The stack follows the **LIFO – Last In, First Out** principle.
+
+Supported operations include:
+
+- Push
+- Pop
+- Peek
+- Display stack
+- Check empty condition
+- Check full condition
+- Handle stack overflow
+- Handle stack underflow
+
+Implemented in:
+
+`src/IntStack.java`
+
+---
+
+### 3. Circular Queue
+
+The circular queue follows the **FIFO – First In, First Out** principle.
+
+Supported operations include:
+
+- Enqueue
+- Dequeue
+- View front element
+- Display queue
+- Detect full queue
+- Detect empty queue
+- Reuse available array positions using circular indexing
+
+Implemented in:
+
+`src/CircularQueue.java`
+
+---
+
+### 4. Singly Linked List
+
+A custom singly linked list is implemented to store integer values.
+
+Supported operations include:
+
+- Insert at beginning
+- Insert at end
+- Delete an element
+- Search for an element
+- Display linked-list elements
+- Maintain head and tail references
+
+Implemented in:
+
+`src/IntLinkedList.java`
+
+---
+
+### 5. Searching Algorithms
+
+The project implements two searching algorithms.
+
+#### Linear Search
+
+Linear Search checks elements one by one until the target value is found.
+
+**Time Complexity:**
+
+- Best Case: `O(1)`
+- Worst Case: `O(n)`
+
+#### Binary Search
+
+Binary Search repeatedly divides the search range into two halves.
+
+Binary Search requires the data to be sorted before searching.
+
+**Time Complexity:**
+
+- Best Case: `O(1)`
+- Worst Case: `O(log n)`
+
+Implemented in:
+
+- `src/SearchAlgorithms.java`
+- `src/SearchResult.java`
+
+The search result stores information such as:
+
+- Search result/index
+- Number of steps
+- Execution time
+
+---
+
+### 6. Graph
+
+The project contains an undirected graph implementation.
+
+Supported operations include:
+
+- Add vertex
+- Add edge
+- Search for vertices
+- Display graph
+- Breadth-First Search
+- Depth-First Search
+
+Implemented in:
+
+`src/Graph.java`
+
+---
+
+### 7. Breadth-First Search – BFS
+
+Breadth-First Search explores the graph level by level.
+
+A queue is used during BFS traversal.
+
+**Time Complexity:**
+
+`O(V + E)`
+
+Where:
+
+- `V` = number of vertices
+- `E` = number of edges
+
+---
+
+### 8. Depth-First Search – DFS
+
+Depth-First Search explores one path as deeply as possible before backtracking.
+
+The project uses recursive DFS traversal.
+
+**Time Complexity:**
+
+`O(V + E)`
+
+Graph traversal results are represented using:
+
+`src/TraversalResult.java`
+
+---
+
+### 9. Performance Analysis
+
+The application records performance information for searching and graph traversal operations.
+
+Performance information includes:
+
+- Algorithm name
+- Number of steps
+- Execution time
+- Search/traversal results
+
+Implemented in:
+
+`src/PerformanceLog.java`
+
+`System.nanoTime()` is used to obtain execution-time measurements.
+
+The measured time is intended for educational comparison and may vary between computers and program executions.
+
+---
+
+## Final Project Structure
+
+```text
+GITHUB_PROJECT/
+│
+├── src/
+│   ├── CircularQueue.java
+│   ├── Graph.java
+│   ├── IntArray.java
+│   ├── IntLinkedList.java
+│   ├── IntStack.java
+│   ├── Main.java
+│   ├── PerformanceLog.java
+│   ├── SearchAlgorithms.java
+│   ├── SearchResult.java
+│   ├── test.txt
+│   └── TraversalResult.java
+│
+└── README.md
